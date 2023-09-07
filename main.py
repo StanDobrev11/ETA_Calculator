@@ -38,7 +38,7 @@ INPUT               OUTPUT
 from datetime import datetime, timedelta
 
 dep_date_time_lt = (datetime.strptime
-                    (input('Enter departure date/time in format (DD-MM-YY HH-MM): '), '%d-%m-%y %H-%M'))
+                    (input('Enter departure date/time in format (DDMMYY HHMM): '), '%d%m%y %H%M'))
 dep_port_utc_offset = timedelta(hours=float(input('Enter departure port difference to UTC (LT = UTC +/-): ')))
 arr_port_utc_offset = timedelta(hours=float(input('Enter arrival port difference to UTC (LT = UTC +/-): ')))
 
@@ -56,7 +56,7 @@ if task_chosen == '1':
     print(arr_date_time_utc, 'UTC')
 else:
     arr_date_time_lt = (datetime.strptime
-                        (input('Enter arrival date/time in format (DD-MM-YY HH-MM): '), '%d-%m-%y %H-%M'))
+                        (input('Enter arrival date/time in format (DDMMYY HHMM): '), '%d%m%y %H%M'))
     arr_date_time_utc = arr_date_time_lt - arr_port_utc_offset
     travel_time = arr_date_time_utc - dep_date_time_utc
     days, seconds = travel_time.days, travel_time.seconds
