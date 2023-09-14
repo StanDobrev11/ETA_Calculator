@@ -43,7 +43,7 @@ dep_port_utc_offset = timedelta(hours=float(input('Enter departure port differen
 arr_port_utc_offset = timedelta(hours=float(input('Enter arrival port difference to UTC (LT = UTC +/-): ')))
 
 dep_date_time_utc = dep_date_time_lt - dep_port_utc_offset
-distance = int(input('Input distance in NM: '))
+distance = int(input('Enter distance in NM: '))
 
 task_chosen = input('Calculated ETA(1) or calculated required SOG(2)?: ')
 
